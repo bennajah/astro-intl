@@ -1,0 +1,1 @@
+{"version":3,"file":"fetch-entry.js","sourceRoot":"","sources":["../src/fetch-entry.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;GAUG;AACH,OAAO,EAAC,UAAU,EAAE,KAAK,EAAC,MAAM,aAAa,CAAC;AAC9C,OAAO,EAAC,eAAe,EAAC,MAAM,YAAY,CAAC;AAE3C,eAAe;IACd,KAAK,CAAC,OAAgB;QACrB,OAAO,KAAK,CAAC,IAAI,UAAU,CAAC,eAAe,CAAC,OAAO,CAAC,CAAC,CAAC,CAAC;IACxD,CAAC;CACD,CAAC"}

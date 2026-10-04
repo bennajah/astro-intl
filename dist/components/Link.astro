@@ -1,0 +1,28 @@
+---
+import {getPathname} from '../runtime/get-pathname.js';
+import {table} from '../runtime/instance.js';
+
+interface Props {
+	/** Internal route pathname, e.g. `/blog/[slug]` with `params`. */
+	href: string;
+	/** Target locale. Defaults to the locale of the current request. */
+	locale?: string;
+	/** Values for `[param]` and `[...rest]` placeholders in `href`. */
+	params?: Readonly<Record<string, string | number>>;
+	[key: string]: unknown;
+}
+
+const {href, locale: requested, params, ...rest} = Astro.props as Props;
+const routing = table();
+const current = (Astro.locals as {locale?: string}).locale ?? routing.locales[routing.def]!;
+const locale = requested ?? current;
+const index = routing.locales.indexOf(locale);
+if (index === -1) {
+	throw new Error(
+		`astro-intl: <Link locale="${locale}"> is not one of the configured locales [${routing.locales.join(', ')}].`
+	);
+}
+const external = routing.base + getPathname(routing, index, href, params);
+---
+
+<a href={external} hreflang={locale} data-intl-locale={locale} {...rest}><slot /></a>

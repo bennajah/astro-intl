@@ -1,0 +1,29 @@
+---
+import {alternates} from '../runtime/alternates.js';
+import {table} from '../runtime/instance.js';
+
+const routing = table();
+const locale = (Astro.locals as {locale?: string}).locale ?? routing.locales[routing.def]!;
+const index = routing.locales.indexOf(locale);
+if (index === -1) {
+	throw new Error(
+		`astro-intl: <IntlHead> received "${locale}", which is not one of the configured locales [${routing.locales.join(', ')}].`
+	);
+}
+const pathname = (Astro.locals as {pathname?: string}).pathname ?? Astro.url.pathname;
+const links = alternates(routing, pathname);
+const xDefault = links[routing.def]!;
+---
+
+{
+	links.map((link) => (
+		<link
+			rel="alternate"
+			hreflang={link.locale}
+			href={routing.base + link.href}
+			data-intl-locale={link.locale}
+		/>
+	))
+}
+<link rel="alternate" hreflang="x-default" href={routing.base + xDefault.href} data-intl-locale="x-default" />
+<meta http-equiv="content-language" content={routing.langs[index]!} />
