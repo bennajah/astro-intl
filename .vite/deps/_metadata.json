@@ -1,0 +1,74 @@
+{
+  "hash": "71c1dd3d",
+  "configHash": "e3a13640",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "bf1510c5",
+  "optimized": {
+    "astro > aria-query": {
+      "src": "../../../../../../../../../../Users/bennajah/Sites/packages/i18n/node_modules/aria-query/lib/index.js",
+      "file": "astro_n_aria-query.js",
+      "fileHash": "81c24867",
+      "needsInterop": true
+    },
+    "astro > axobject-query": {
+      "src": "../../../../../../../../../../Users/bennajah/Sites/packages/i18n/node_modules/axobject-query/lib/index.js",
+      "file": "astro_n_axobject-query.js",
+      "fileHash": "a19bb11f",
+      "needsInterop": true
+    },
+    "astro > html-escaper": {
+      "src": "../../../../../../../../../../Users/bennajah/Sites/packages/i18n/node_modules/html-escaper/esm/index.js",
+      "file": "astro_n_html-escaper.js",
+      "fileHash": "5898ff42",
+      "needsInterop": false
+    },
+    "astro/runtime/client/dev-toolbar/entrypoint.js": {
+      "src": "../../../../../../../../../../Users/bennajah/Sites/packages/i18n/node_modules/astro/dist/runtime/client/dev-toolbar/entrypoint.js",
+      "file": "astro_runtime_client_dev-toolbar_entrypoint__js.js",
+      "fileHash": "e34061ad",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "astro-CSzBD727": {
+      "file": "astro-CSzBD727.js",
+      "isDynamicEntry": true
+    },
+    "audit-DXMYfxgz": {
+      "file": "audit-DXMYfxgz.js",
+      "isDynamicEntry": true
+    },
+    "highlight-CQIk7bXh": {
+      "file": "highlight-CQIk7bXh.js",
+      "isDynamicEntry": false
+    },
+    "icons-ikr80zat": {
+      "file": "icons-ikr80zat.js",
+      "isDynamicEntry": false
+    },
+    "rolldown-runtime-BvCyGRYZ": {
+      "file": "rolldown-runtime-BvCyGRYZ.js",
+      "isDynamicEntry": false
+    },
+    "settings-7XV_7fjv": {
+      "file": "settings-7XV_7fjv.js",
+      "isDynamicEntry": true
+    },
+    "toolbar-DaHTl3CD": {
+      "file": "toolbar-DaHTl3CD.js",
+      "isDynamicEntry": true
+    },
+    "ui-library-68s8Vh5Z": {
+      "file": "ui-library-68s8Vh5Z.js",
+      "isDynamicEntry": true
+    },
+    "window-_H8awC4q": {
+      "file": "window-_H8awC4q.js",
+      "isDynamicEntry": false
+    },
+    "xray-Ct-y1MTV": {
+      "file": "xray-Ct-y1MTV.js",
+      "isDynamicEntry": true
+    }
+  }
+}

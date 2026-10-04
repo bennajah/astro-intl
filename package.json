@@ -1,0 +1,92 @@
+{
+  "name": "astro-intl",
+  "version": "0.1.0",
+  "description": "Server-side internationalization for Astro 7 \u2014 next-intl-equivalent routing, messages and navigation with zero dependencies and zero client JS.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "astro-integration",
+    "i18n",
+    "intl",
+    "astro",
+    "routing",
+    "icu"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./routing": {
+      "types": "./dist/routing.d.ts",
+      "default": "./dist/routing.js"
+    },
+    "./navigation": {
+      "types": "./dist/navigation.d.ts",
+      "default": "./dist/navigation.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "default": "./dist/server.js"
+    },
+    "./middleware": {
+      "types": "./dist/middleware.d.ts",
+      "default": "./dist/middleware.js"
+    },
+    "./fetch": {
+      "types": "./dist/fetch.d.ts",
+      "default": "./dist/fetch.js"
+    },
+    "./hono": {
+      "types": "./dist/hono.d.ts",
+      "default": "./dist/hono.js"
+    },
+    "./integration": {
+      "types": "./dist/integration.d.ts",
+      "default": "./dist/integration.js"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.ts",
+      "default": "./dist/cli.js"
+    },
+    "./components": {
+      "types": "./dist/components.d.ts",
+      "default": "./dist/components.js"
+    },
+    "./components/Link.astro": "./dist/components/Link.astro",
+    "./components/IntlHead.astro": "./dist/components/IntlHead.astro",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "astro-intl": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node scripts/copy-astro.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test --experimental-strip-types --test-concurrency=2 \"test/**/*.test.ts\"",
+    "test:unit": "node --test --experimental-strip-types \"test/core/*.test.ts\"",
+    "test:integration": "node --test --experimental-strip-types \"test/integration/*.test.ts\"",
+    "check": "npm run typecheck && npm run build && npm run test:unit && npm run test:integration && npm run size && npm run bench",
+    "size": "node --experimental-strip-types test/size/size.ts",
+    "bench": "node --experimental-strip-types bench/bench.ts",
+    "spike": "node --experimental-strip-types spike/run.ts"
+  },
+  "peerDependencies": {
+    "astro": "^7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "astro": "^7.3.5",
+    "typescript": "^5.9.0"
+  }
+}

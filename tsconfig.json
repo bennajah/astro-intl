@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "moduleDetection": "force",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "allowArbitraryExtensions": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["node"],
+    "paths": {
+      "astro-intl": ["./src/index.ts"],
+      "astro-intl/routing": ["./src/routing.ts"],
+      "astro-intl/navigation": ["./src/navigation.ts"],
+      "astro-intl/server": ["./src/server.ts"],
+      "astro-intl/middleware": ["./src/middleware.ts"],
+      "astro-intl/fetch": ["./src/fetch.ts"],
+      "astro-intl/hono": ["./src/hono.ts"],
+      "astro-intl/integration": ["./src/integration.ts"],
+      "astro-intl/components": ["./src/components.ts"]
+    }
+  },
+  "include": ["src", "test", "bench", "playground"]
+}

@@ -1,0 +1,6 @@
+node_modules/
+dist/
+spike/.tmp/
+.playground-dist/
+*.tsbuildinfo
+.DS_Store
